@@ -1,6 +1,9 @@
 (menu-bar-mode -1)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
+
+(if (boundp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
+(if (boundp 'tool-bar-mode)
+    (tool-bar-mode -1))
 (show-paren-mode t)
 (iswitchb-mode t)    ;fuck yes
 (winner-mode 1)
