@@ -4,14 +4,17 @@
 (show-paren-mode t)
 (iswitchb-mode t)    ;fuck yes
 (winner-mode 1)
-(display-battery-mode 1)
+(if (boundp 'display-battery-mode)
+    (display-battery-mode 1))
 (setq ring-bell-function '(lambda () t))
 (global-auto-revert-mode)
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/yasnippet/")
 
-(require 'auto-complete)
-(global-auto-complete-mode t)
+(if (boundp 'defvaralias)
+    (progn
+      (require 'auto-complete)
+      (global-auto-complete-mode t)))
 
 
 (defun insert-date (prefix)
@@ -48,11 +51,12 @@ BEG and END (region to sort)."
 ;;                            "~/.emacs.d/yasnippet/snippets"))
                            
 ;(mapc 'yas/load-directory yas/root-directory)
-(require 'yasnippet)
-(require 'django-html-mode)
-(require 'django-mode)
-(yas/load-directory "~/.emacs.d/snippets")
-(add-to-list 'auto-mode-alist '("\\.twig$" . django-html-mode))
+(if (boundp 'help-mode)
+    (progn
+      (yas/load-directory "~/.emacs.d/snippets")
+      (require 'django-mode)
+      (require 'django-html-mode)
+      (add-to-list 'auto-mode-alist '("\\.twig$" . django-html-mode))))
 
 (require 'psvn)
 
@@ -96,17 +100,20 @@ BEG and END (region to sort)."
 ;(load-library "init_python")
 (autoload #'espresso-mode "espresso" "Start espresso-mode" t)
 ;(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
-(load "~/.emacs.d/nxhtml/autostart.el")
+
+(if (= emacs-major-version 22)
+    (load "~/.emacs.d/nxhtml/autostart.el"))
 
 (add-to-list 'auto-mode-alist '("PKGBUILD" . sh-mode))
 
-(require 'magit)
+;(require 'magit)
 
 ; project definitions
 ;; (require 'eproject)
 ;; (require 'eproject-extras)
 ;(require 'espect)
-(require 'qooxdoo)
+(if (boundp 'ibuffer)
+    (require 'qooxdoo))
 
 (setq qooxdoo-api-url "http://cogneato.local/qx/controlcenter/api/index.html#")
 (add-hook 'qooxdoo-project-file-visit-hook
@@ -175,8 +182,9 @@ BEG and END (region to sort)."
 ;(add-hook 'c-mode-common-hook 'guess-style-guess-all)
 ;(add-hook 'find-file-hook 'flymake-mode)
 ;keep TRAMP from saving backups
-(add-to-list 'backup-directory-alist
-             (cons tramp-file-name-regexp nil))
+(if (boundp 'tramp-file-name-regexp)
+    (add-to-list 'backup-directory-alist
+		 (cons tramp-file-name-regexp nil)))
 
 (setq tramp-default-method "ssh")
 
