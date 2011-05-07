@@ -1,0 +1,10 @@
+[submodule ".emacs.d/eproject"]
+	path = .emacs.d/eproject
+	url = https://github.com/jrockway/eproject.git
+[submodule ".emacs.d/startproject"]
+	path = .emacs.d/startproject
+	url = https://github.com/myfreeweb/startproject.git
+
+[submodule "magit"]
+	path = magit
+	url = https://github.com/magit/magit.git

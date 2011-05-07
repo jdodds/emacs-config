@@ -12,7 +12,11 @@
 (setq ring-bell-function '(lambda () t))
 (global-auto-revert-mode)
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/eproject")
+(add-to-list 'load-path "~/.emacs.d/startproject")
 (add-to-list 'load-path "~/.emacs.d/yasnippet/")
+
+(require 'startproject)
 
 (if (boundp 'defvaralias)
     (progn
