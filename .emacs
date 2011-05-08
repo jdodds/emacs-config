@@ -16,7 +16,9 @@
 (add-to-list 'load-path "~/.emacs.d/startproject")
 (add-to-list 'load-path "~/.emacs.d/yasnippet/")
 
-(require 'startproject)
+(require 'magit)
+
+(autoload #'startproject "startproject/startproject.el" "Start Project Library" t)
 
 (if (boundp 'defvaralias)
     (progn
@@ -357,10 +359,10 @@ BEG and END (region to sort)."
 ;BELOW HERE THERE BE DRAGONS.
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(c-label-minimum-indentation 2)
  '(c-syntactic-indentation t)
  '(espresso-auto-indent-flag nil)
@@ -372,12 +374,13 @@ BEG and END (region to sort)."
  '(python-use-skeletons nil)
  '(sql-database "cogneato_dev")
  '(sql-mysql-program "/usr/local/bin/mysql")
- '(sql-server "cogneato.local"))
+ '(sql-server "cogneato.local")
+ '(startproject-projects-root "~/workspace"))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "Adobe" :family "Courier"))))
  '(mmm-default-submode-face ((t (:background "gray85" :foreground "black"))))
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)))))
