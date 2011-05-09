@@ -29,13 +29,13 @@ for link in ${to_link[@]}; do
     original=$(find_path $link)
 
     if [ ! -L $target ]; then
-	if [[ -f $target && $(diff $original $target) ]]; then
-	    newtarget=$target.new
-	    difftarget=$target.diff
-	    echo "installing $target as $newtarget, check $(find_path $difftarget)"
-	    diff -u $original $target > $difftarget
-	    target=$target.new
-	fi
-	ln -sf $original $target 
+        if [[ -f $target && $(diff $original $target) ]]; then
+            newtarget=$target.new
+            difftarget=$target.diff
+            echo "installing $target as $newtarget, check $(find_path $difftarget)"
+            diff -u $original $target > $difftarget
+            target=$target.new
+        fi
+        ln -sf $original $target
     fi
 done
