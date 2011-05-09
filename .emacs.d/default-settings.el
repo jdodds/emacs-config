@@ -38,9 +38,5 @@
 
 (put 'upcase-region 'disabled nil)
 
-(if (eq system-type 'darwin)
-    (setq custom-file "~/.emacs.d/darwin-custom.el")
-  (setq custom-file "~/.emacs.d/linux-custom.el"))
-
 (provide 'default-settings)
 ;;; default-settings.el ends here

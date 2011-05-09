@@ -10,8 +10,10 @@
 (require 'global-keys)
 (require 'default-settings)
 (require 'default-auto-modes)
+(require 'machine-specific)
 
 (load "~/.emacs.d/haskell-mode/haskell-site-file")
 (load custom-file)
+
 (server-start)
 
