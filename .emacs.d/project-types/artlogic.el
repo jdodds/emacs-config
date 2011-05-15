@@ -5,6 +5,7 @@
        '((nil \. ((indent-tabs-mode \. nil)
 		(tab-width \. 3)))
 	  (espresso-mode \. ((espresso-indent-level  \. 3)))
+	  (html-mode \. ((sgml-basic-offset . 3)))
 	  (js-mode \. ((js-indent-level \. 3))))
        t))
 

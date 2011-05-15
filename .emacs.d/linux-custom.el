@@ -12,6 +12,7 @@
  '(markdown-italic-underscore t)
  '(python-honour-comment-indentation nil)
  '(python-use-skeletons nil)
+ '(safe-local-variable-values (quote ((sgml-basic-offset . 3) (js-indent-level . 3))))
  '(sql-database "cogneato_dev")
  '(sql-mysql-program "/usr/local/bin/mysql")
  '(sql-server "cogneato.local")
@@ -22,7 +23,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "ttf" :family "ttf-inconsolata"))))
+ '(default ((t (:stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Inconsolata"))))
  '(mmm-default-submode-face ((t (:background "gray85" :foreground "black"))))
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)))))
  '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) nil)))
