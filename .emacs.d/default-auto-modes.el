@@ -5,6 +5,7 @@
 	("\\.yml$" . yaml-mode)
 	("\\.rst$" . rst-mode)
 	("\\.org$" . org-mode)
+	("\\.php$" . php-mode)
 	("\\.lua$" . lua-mode)))
 (dolist (alist modes-list)
   (add-to-list 'auto-mode-alist alist))

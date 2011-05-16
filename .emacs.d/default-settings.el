@@ -33,6 +33,8 @@
 (setq erc-auto-query 'buffer)
 
 (setq org-log-done 'time)
+(setq org-src-fontify-natively t)
+(setq org-startup-indented t)
 
 (put 'narrow-to-region 'disabled nil)
 

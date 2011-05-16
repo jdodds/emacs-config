@@ -18,7 +18,10 @@
   "Major mode for editing Markdown files" t)
 
 (autoload #'rst-minor-mode "rst.el"
-  "Minor mode for editing ReStructuredText")
+  "Minor mode for editing ReStructuredText" t)
+
+(autoload #'php-mode "php-mode.el"
+  "Major mode for editing php files" t)
 
 (autoload #'rainbow-delimiters-mode "rainbow-colors.el"
   "Minor mode for coloring delimiters" t)
