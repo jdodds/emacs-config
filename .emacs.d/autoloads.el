@@ -20,5 +20,7 @@
 (autoload #'rst-minor-mode "rst.el"
   "Minor mode for editing ReStructuredText")
 
+(autoload #'rainbow-delimiters-mode "rainbow-colors.el"
+  "Minor mode for coloring delimiters" t)
 (provide 'autoloads)
 ;;; autoloads.el ends here

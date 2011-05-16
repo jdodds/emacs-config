@@ -1,16 +1,23 @@
-(add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/eproject")
-(add-to-list 'load-path "~/.emacs.d/geben/")
-(add-to-list 'load-path "~/.emacs.d/startproject")
-(add-to-list 'load-path "~/.emacs.d/project-types")
+(dolist (directory
+	 (list
+	  "~/.emacs.d/"
+	  "~/.emacs.d/eproject"
+	  "~/.emacs.d/geben/"
+	  "~/.emacs.d/startproject"
+	  "~/.emacs.d/zencoding"
+	  "~/.emacs.d/project-types")
+	 load-path)
+  (add-to-list 'load-path directory))
 
-(require 'requires)
+(load "~/.emacs.d/requires.el")
 (require 'autoloads)
 (require 'global-modes)
 (require 'global-keys)
+(require 'default-hooks)
 (require 'default-settings)
 (require 'default-auto-modes)
 (require 'machine-specific)
+
 
 (load "~/.emacs.d/haskell-mode/haskell-site-file")
 (load custom-file)

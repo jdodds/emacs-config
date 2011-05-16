@@ -7,10 +7,22 @@
 	     (setq tab-width 4)))
 
 (add-hook 'php-mode-hook
-          'set-electrics)
+	  '(lambda ()
+	     (rainbow-delimiters-mode t)
+	     (set-electrics)))
 
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+(add-hook 'js-mode-hook
+	  '(lambda ()
+	     (rainbow-delimiters-mode t)))
+
+(add-hook 'haskell-mode-hook
+	  '(lambda()
+	     (turn-on-haskell-doc-mode)
+	     (turn-on-haskell-indent)))
+
+(add-hook 'sgml-mode-hook
+	  '(lambda()
+	     (zencoding-mode t)))
 
 (provide 'default-hooks)
 ;;; default-hooks.el ends here
