@@ -8,6 +8,7 @@
 .authinfo
 .gnus.el
 .#*
+*/.bzr*
 *elc
 *~
 install.log
