@@ -1,5 +1,5 @@
 ;;; TODO :: Refactor these out into autoloads if possible.
-(require 'magit)
+;(require 'magit)
 (require 'psvn)
 (require 'qooxdoo)
 (require 'django-mode)
