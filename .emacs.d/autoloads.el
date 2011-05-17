@@ -23,5 +23,7 @@
 (autoload #'php-mode "php-mode.el"
   "Major mode for editing php files" t)
 
+(autoload #'rainbow-delimiters-mode "rainbow-colors.el"
+  "Minor mode for coloring delimiters" t)
 (provide 'autoloads)
 ;;; autoloads.el ends here

@@ -5,9 +5,11 @@
 .emacs.d/nxhtml/etc/schema/xhtml-loader.rnc
 .emacs.d/tramp
 .emacs.d/share/
+.emacs.d/elpa/archives/gnu/archive-contents
 .authinfo
 .gnus.el
 .#*
+*/.bzr*
 *elc
 *~
 install.log

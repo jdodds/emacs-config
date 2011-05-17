@@ -8,6 +8,7 @@
 (require 'yaml-mode)
 (require 'tramp)
 (require 'rst)
+(require 'zenburn-theme)
+(require 'zencoding-mode)
 
-(provide 'requires)
 ;;; requires.el ends here
