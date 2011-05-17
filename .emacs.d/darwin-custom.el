@@ -3,13 +3,18 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(c-label-minimum-indentation 2)
+ '(c-label-minimum-indentation 4)
+ '(c-basic-offset 4)
+ '(c-arglist-intro-offset 4)
+ '(c-arglist-close 0)
+ '(arglist-intro 4)
  '(c-syntactic-indentation t)
- '(espresso-auto-indent-flag nil)
+ '(espresso-auto-indent-flag t)
  '(espresso-expr-indent-offset 0)
  '(espresso-indent-level 4)
  '(markdown-command "markdown")
  '(markdown-italic-underscore t)
+ '(org-agenda-files (quote ("~/workspace/controlcenter/TODO.org")))
  '(python-honour-comment-indentation nil)
  '(python-use-skeletons nil)
  '(sql-database "cogneato_dev")
