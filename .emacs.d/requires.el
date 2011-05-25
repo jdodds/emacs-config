@@ -10,5 +10,5 @@
 (require 'rst)
 (require 'zenburn-theme)
 (require 'zencoding-mode)
-
+(require 'uniquify)
 ;;; requires.el ends here

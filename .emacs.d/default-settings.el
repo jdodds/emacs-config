@@ -40,5 +40,7 @@
 
 (put 'upcase-region 'disabled nil)
 
+(setq uniquify-buffer-name-style 'post-forward)
+
 (provide 'default-settings)
 ;;; default-settings.el ends here
