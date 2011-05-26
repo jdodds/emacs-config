@@ -1,0 +1,5 @@
+(1
+ (org-odt .
+	  [(20110519)
+	   nil "OpenDocumentText exporter for Orgmode" tar]))
+
