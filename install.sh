@@ -23,14 +23,6 @@ if [[ ! -f /usr/local/share/emacs/site-lisp/magit.el ||
     popd
 fi
 
-if [[ ! -f /usr/local/share/emacs/site-lisp/vm.el ||
-	    $1 == "rebuild" ||
-	    $1 == "rebuild-vm" ]]; then
-    pushd vm
-    log_command "make" && log_command "sudo make install"
-    popd
-fi
-
 to_link=(./djcb-elisp/themes/zenburn-theme.el)
 for link in ${to_link[@]}; do
     target=$(find_path $HOME/.unix-confs/emacs-config/.emacs.d)
