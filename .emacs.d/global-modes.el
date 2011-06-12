@@ -17,7 +17,6 @@
 (iswitchb-mode t)   
 (winner-mode 1)
 
-(setq transient-mark-mode nil)
 (setq auto-save-default nil)
 (setq column-number-mode t)
 

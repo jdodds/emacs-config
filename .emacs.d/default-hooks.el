@@ -9,7 +9,11 @@
 (add-hook 'php-mode-hook
 	  '(lambda ()
 	     (rainbow-delimiters-mode t)
-	     (set-electrics)))
+	     (setq tab-width 4)
+	     (setq indent-tabs-mode nil)
+	     (setq c-basic-offset 4)
+	     (c-set-offset 'arglist-intro 4)
+	     (c-set-offset 'arglist-close 0)))
 
 (add-hook 'js-mode-hook
 	  '(lambda ()

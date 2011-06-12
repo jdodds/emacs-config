@@ -11,6 +11,7 @@
  '(espresso-indent-level 4)
  '(markdown-command "markdown")
  '(markdown-italic-underscore t)
+ '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
  '(python-honour-comment-indentation nil)
  '(python-use-skeletons nil)
  '(safe-local-variable-values (quote ((sgml-basic-offset . 3) (js-indent-level . 3))))

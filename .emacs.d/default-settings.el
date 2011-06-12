@@ -35,6 +35,16 @@
 (setq org-log-done 'time)
 (setq org-src-fontify-natively t)
 (setq org-startup-indented t)
+(setq org-startup-align-all-tables t)
+(setq org-footnote-auto-adjust t)
+(setq org-enforce-todo-dependencies t)
+(setq org-agenda-dim-blocked-todo t)
+(setq org-log-into-drawer t)
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d!)" "CANCELLED(c@)")))
+(setq org-clock-idle-time 30)
+
+
 
 (put 'narrow-to-region 'disabled nil)
 
