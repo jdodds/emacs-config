@@ -21,6 +21,6 @@
 
 (load "~/.emacs.d/haskell-mode/haskell-site-file")
 (load custom-file)
-
+(enable-theme 'zenburn)
 (server-start)
 
