@@ -23,14 +23,11 @@ if [[ ! -f /usr/local/share/emacs/site-lisp/magit.el ||
     popd
 fi
 
-to_link=(./djcb-elisp/themes/zenburn-theme.el)
-for link in ${to_link[@]}; do
+to_copy=(./djcb-elisp/themes/zenburn-theme.el)
+for f in ${to_copy[@]}; do
     target=$(find_path $HOME/.unix-confs/emacs-config/.emacs.d)
-    original=$(find_path $link)
-
-    if [ ! -L $target ]; then
-	ln -sf $original $target
-    fi
+    original=$(find_path $f)
+    cp -f $original $target/
 done
 
 to_link=(.emacs .emacs.d)
