@@ -15,9 +15,9 @@
  '(python-honour-comment-indentation nil)
  '(python-use-skeletons nil)
  '(safe-local-variable-values (quote ((sgml-basic-offset . 3) (js-indent-level . 3))))
- '(sql-database "cogneato_dev")
+ '(sql-database "")
  '(sql-mysql-program "/usr/bin/mysql")
- '(sql-server "cogneato.local")
+ '(sql-server "localhost")
  '(startproject-projects-root "~/workspace"))
 
 (custom-set-faces

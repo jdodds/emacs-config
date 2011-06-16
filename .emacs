@@ -11,6 +11,7 @@
 
 (load "~/.emacs.d/requires.el")
 (require 'autoloads)
+(require 'utils)
 (require 'global-modes)
 (require 'global-keys)
 (require 'default-hooks)
