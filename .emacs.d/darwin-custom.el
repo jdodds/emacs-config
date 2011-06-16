@@ -14,7 +14,7 @@
  '(espresso-indent-level 4 t)
  '(markdown-command "markdown")
  '(markdown-italic-underscore t)
- '(org-agenda-files (quote ("~/workspace/controlcenter/TODO.org")))
+ '(org-agenda-files nil)
  '(package-archives (quote (("org-odt" . "http://repo.or.cz/w/org-mode/org-jambu.git/blob_plain/HEAD:/packages/") ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(python-honour-comment-indentation nil)
  '(python-use-skeletons nil)
