@@ -52,5 +52,7 @@
 
 (setq uniquify-buffer-name-style 'post-forward)
 
+(setq yaml-indent-offset 4)
+
 (provide 'default-settings)
 ;;; default-settings.el ends here
