@@ -22,6 +22,7 @@
 
 (setq midnight-mode t)
 (auto-fill-mode t)
+(setq-default indent-tabs-mode nil)
 
 (provide 'global-modes)
 ;;; global-modes.el ends here
