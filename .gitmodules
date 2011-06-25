@@ -3,7 +3,7 @@
 	url = https://github.com/jrockway/eproject.git
 [submodule ".emacs.d/startproject"]
 	path = .emacs.d/startproject
-	url = https://github.com/myfreeweb/startproject.git
+	url = http://github.com/jdodds/startproject.git
 [submodule "magit"]
 	path = magit
 	url = https://github.com/magit/magit.git
