@@ -25,5 +25,8 @@
 
 (autoload #'rainbow-delimiters-mode "rainbow-colors.el"
   "Minor mode for coloring delimiters" t)
+
+(autoload 'apache-mode "apache-mode" nil t)
+
 (provide 'autoloads)
 ;;; autoloads.el ends here

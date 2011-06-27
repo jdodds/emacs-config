@@ -6,7 +6,12 @@
 	("\\.rst$" . rst-mode)
 	("\\.org$" . org-mode)
 	("\\.php$" . php-mode)
-	("\\.lua$" . lua-mode)))
+	("\\.lua$" . lua-mode)
+        ("\\.htaccess$" . apache-mode)
+        ("httpd.*\\.conf$" . apache-mode)
+        ("srm\\.conf$" . apache-mode)
+        ("access\\.conf$" . apache-mode)
+        ("sites-\\(available\\|enabled\\)/" . apache-mode)))
 (dolist (alist modes-list)
   (add-to-list 'auto-mode-alist alist))
 
