@@ -6,8 +6,8 @@
 (if (boundp 'tool-bar-mode)
     (tool-bar-mode -1))
 
-(if (boundp 'display-battery-mode)
-    (display-battery-mode 1))
+;(if (boundp 'display-battery-mode)
+;    (display-battery-mode 1))
 
 (global-auto-revert-mode)
 (global-auto-complete-mode t)
