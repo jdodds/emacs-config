@@ -13,3 +13,12 @@
 [submodule ".emacs.d/zencoding"]
 	path = .emacs.d/zencoding
 	url = https://github.com/rooney/zencoding.git
+[submodule ".emacs.d/rhtml"]
+	path = .emacs.d/rhtml
+	url = https://github.com/eschulte/rhtml
+[submodule ".emacs.d/rinari"]
+	path = .emacs.d/rinari
+	url = http://github.com/eschulte/rinari.git
+[submodule ".emacs.d/feature-mode"]
+	path = .emacs.d/feature-mode
+	url = https://github.com/michaelklishin/cucumber.el
