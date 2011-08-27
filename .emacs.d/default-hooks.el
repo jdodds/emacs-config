@@ -24,9 +24,6 @@
              (turn-on-haskell-doc-mode)
              (turn-on-haskell-indent)))
 
-(add-hook 'sgml-mode-hook
-          '(lambda()
-             (zencoding-mode t)))
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
 

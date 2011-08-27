@@ -8,7 +8,11 @@
 (require 'yaml-mode)
 (require 'tramp)
 (require 'rst)
-(require 'zenburn-theme)
-(require 'zencoding-mode)
+;(require 'zenburn-theme)
+;(require 'zencoding-mode)
+(require 'color-theme)
 (require 'uniquify)
+(require 'rhtml-mode)
+(require 'rinari)
+(require 'haml-mode)
 ;;; requires.el ends here
