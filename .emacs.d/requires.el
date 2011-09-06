@@ -15,4 +15,5 @@
 (require 'rhtml-mode)
 (require 'rinari)
 (require 'haml-mode)
+(require 'sass-mode)
 ;;; requires.el ends here

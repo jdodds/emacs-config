@@ -16,8 +16,9 @@
         ("Gemfile" . ruby-mode)
         ("\\.erb$" . rhtml-mode)
         ("\\.feature$" . feature-mode)
+        ("\\.scss$" . sass-mode)
         ("sites-\\(available\\|enabled\\)/" . apache-mode)))
-;(add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
+;(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
 (dolist (alist modes-list)
   (add-to-list 'auto-mode-alist alist))
 

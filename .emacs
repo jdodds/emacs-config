@@ -10,11 +10,12 @@
           "~/.emacs.d/rinari"
           "~/.emacs.d/haml-mode"
           "~/.emacs.d/color-theme"
+          "~/.emacs.d/sass-mode"
            "~/.emacs.d/project-types")
          load-path)
   (add-to-list 'load-path directory))
 
-;(add-to-list 'load-path "~/.emacs.d/color-theme")
+;(add-to-list 'load-path "~/.emacs.d/sass-mode")
 
 (load "~/.emacs.d/requires.el")
 (load "~/.emacs.d/feature-mode/feature-mode")
