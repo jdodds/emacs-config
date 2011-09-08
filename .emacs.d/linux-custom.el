@@ -28,7 +28,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "unknown" :family "Inconsolata"))))
+ '(default ((t (:stipple nil :background "#000000" :foreground "#dedede" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Inconsolata"))))
  '(font-lock-keyword-face ((t (:inherit (quote zenburn-primary-5)))))
  '(mmm-default-submode-face ((t (:background "gray85" :foreground "black"))) t)
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)))) t)
