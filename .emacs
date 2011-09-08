@@ -1,21 +1,7 @@
-(dolist (directory
-         (list
-          "~/.emacs.d/"
-          "~/.emacs.d/eproject"
-          "~/.emacs.d/feature-mode"
-          "~/.emacs.d/geben/"
-          "~/.emacs.d/startproject"
-          "~/.emacs.d/zencoding"
-          "~/.emacs.d/rhtml"
-          "~/.emacs.d/rinari"
-          "~/.emacs.d/haml-mode"
-          "~/.emacs.d/color-theme"
-          "~/.emacs.d/sass-mode"
-           "~/.emacs.d/project-types")
-         load-path)
-  (add-to-list 'load-path directory))
+(add-to-list 'load-path "~/.emacs.d")
 
-;(add-to-list 'load-path "~/.emacs.d/sass-mode")
+(let ((default-directory "~/.emacs.d"))
+  (normal-top-level-add-subdirs-to-load-path))
 
 (load "~/.emacs.d/requires.el")
 (load "~/.emacs.d/feature-mode/feature-mode")
