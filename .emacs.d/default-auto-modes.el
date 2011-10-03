@@ -14,6 +14,7 @@
         ("\\.rake$" . ruby-mode)
         ("Rakefile" . ruby-mode)
         ("Gemfile" . ruby-mode)
+        ("Guardfile" . ruby-mode)
         ("\\.erb$" . rhtml-mode)
         ("\\.feature$" . feature-mode)
         ("\\.scss$" . sass-mode)
