@@ -21,7 +21,6 @@
 (setq column-number-mode t)
 
 (setq midnight-mode t)
-(auto-fill-mode t)
 (setq-default indent-tabs-mode nil)
 
 (provide 'global-modes)

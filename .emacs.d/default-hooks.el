@@ -33,6 +33,7 @@
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 (provide 'default-hooks)
 ;;; default-hooks.el ends here
