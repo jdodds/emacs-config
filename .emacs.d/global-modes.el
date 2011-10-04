@@ -14,7 +14,7 @@
 (global-font-lock-mode t)
 
 (show-paren-mode t)
-(iswitchb-mode t)   
+(iswitchb-mode t)
 (winner-mode 1)
 
 (setq auto-save-default nil)
