@@ -5,6 +5,8 @@
  ((eq system-type 'gnu/linux)
   (setq custom-file "~/.emacs.d/linux-custom.el")
   (require 'magit)
-  (require 'artlogic)))
+  (require 'artlogic)
+  (require 'rvm)
+  (rvm-use-default)))
 
 (provide 'machine-specific)
