@@ -4,8 +4,9 @@
   (setq custom-file "~/.emacs.d/darwin-custom.el"))
  ((eq system-type 'gnu/linux)
   (setq custom-file "~/.emacs.d/linux-custom.el")
+  (setq org-mobile-directory "~/Dropbox/MobileOrg")
   (require 'magit)
-  (require 'artlogic)
+;  (require 'artlogic)
   (require 'rvm)
   (rvm-use-default)))
 

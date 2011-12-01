@@ -12,8 +12,16 @@
              (setq tab-width 4)
              (setq indent-tabs-mode nil)
              (setq c-basic-offset 4)
-             (c-set-offset 'arglist-intro 4)
-             (c-set-offset 'arglist-close 0)))
+	     (defun sane-php-lineup-arglist-intro (langelem)
+	       (save-excursion
+		 (goto-char (cdr langelem))
+		 (vector (+ (current-column) c-basic-offset))))
+	     (defun sane-php-lineup-arglist-close (langelem)
+	       (save-excursion
+		 (goto-char (cdr langelem))
+		 (vector (current-column))))
+	     (c-set-offset 'arglist-intro 'sane-php-lineup-arglist-intro)
+	     (c-set-offset 'arglist-close 'sane-php-lineup-arglist-close)))
 
 (add-hook 'js-mode-hook
           '(lambda ()
@@ -25,7 +33,7 @@
              (turn-on-haskell-indent)))
 
 
-(add-hook 'before-save-hook 'whitespace-cleanup)
+;(remove-hook 'before-save-hook 'whitespace-cleanup)
 
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
@@ -33,7 +41,8 @@
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
 
 (provide 'default-hooks)
 ;;; default-hooks.el ends here

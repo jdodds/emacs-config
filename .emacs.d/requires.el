@@ -16,4 +16,5 @@
 (require 'rinari)
 (require 'haml-mode)
 (require 'sass-mode)
+(require 'which-func)
 ;;; requires.el ends here

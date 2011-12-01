@@ -5,7 +5,12 @@
 .emacs.d/nxhtml/etc/schema/xhtml-loader.rnc
 .emacs.d/tramp
 .emacs.d/share/
-.emacs.d/elpa/archives/gnu/archive-contents
+.emacs.d/elpa/archives/*/archive-contents
+.emacs.d/eshell/history
+.emacs.d/eshell/lastdir
+.emacs.d/.org-id-locations
+.emacs.d/org-clock-save.el
+.emacs.d/url/cookies
 .authinfo
 .gnus.el
 .#*
