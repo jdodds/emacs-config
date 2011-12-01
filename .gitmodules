@@ -34,3 +34,6 @@
 [submodule ".emacs.d/rvm"]
 	path = .emacs.d/rvm
 	url = https://github.com/senny/rvm.el.git
+[submodule ".emacs.d/php-mode"]
+	path = .emacs.d/php-mode
+	url = git://github.com/ejmr/php-mode.git
