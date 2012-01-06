@@ -13,6 +13,7 @@
 (require 'global-keys)
 (require 'default-hooks)
 (require 'default-settings)
+(require 'org-settings)
 (require 'default-auto-modes)
 (require 'machine-specific)
 
@@ -24,5 +25,7 @@
      (color-theme-initialize)
      (color-theme-tomorrow-night-bright)))
 ;(enable-theme 'zenburn)
+(require 'org-install)
 
-(server-start)
+(unless (boundp 'server-process)
+  (server-start))

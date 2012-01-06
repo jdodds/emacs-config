@@ -18,6 +18,7 @@
         ("\\.erb$" . rhtml-mode)
         ("\\.feature$" . feature-mode)
         ("\\.scss$" . sass-mode)
+	("\\.tpl$" . html-mode)
         ("sites-\\(available\\|enabled\\)/" . apache-mode)))
 ;(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
 (dolist (alist modes-list)

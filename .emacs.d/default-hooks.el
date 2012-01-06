@@ -12,6 +12,7 @@
              (setq tab-width 4)
              (setq indent-tabs-mode nil)
              (setq c-basic-offset 4)
+;	     (flymake-mode 1)
 	     (defun sane-php-lineup-arglist-intro (langelem)
 	       (save-excursion
 		 (goto-char (cdr langelem))
@@ -20,8 +21,11 @@
 	       (save-excursion
 		 (goto-char (cdr langelem))
 		 (vector (current-column))))
+;	     (define-key php-mode-map '[M-g n] 'flymake-goto-next-error)
+;	     (define-key php-mode-map '[M-g p] 'flymake-goto-prev-error)
 	     (c-set-offset 'arglist-intro 'sane-php-lineup-arglist-intro)
 	     (c-set-offset 'arglist-close 'sane-php-lineup-arglist-close)))
+
 
 (add-hook 'js-mode-hook
           '(lambda ()
@@ -41,8 +45,14 @@
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
+(add-hook 'org-mode-hook 'turn-on-flyspell 'append)
 ;(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
+(add-hook 'html-mode-hook
+	  (lambda ()
+	    (setq sgml-basic-offset 4)
+	    (setq tab-width 4)
+	    (setq indent-tabs-mode t)))
 
 (provide 'default-hooks)
 ;;; default-hooks.el ends here

@@ -2,8 +2,8 @@
 ;(require 'magit)
 (require 'psvn)
 (require 'qooxdoo)
-(require 'django-mode)
-(require 'django-html-mode)
+;(require 'django-mode)
+;(require 'django-html-mode)
 (require 'auto-complete)
 (require 'yaml-mode)
 (require 'tramp)
@@ -17,4 +17,6 @@
 (require 'haml-mode)
 (require 'sass-mode)
 (require 'which-func)
+(require 'flymake)
+(require 'flymake-cursor)
 ;;; requires.el ends here

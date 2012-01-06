@@ -37,3 +37,6 @@
 [submodule ".emacs.d/php-mode"]
 	path = .emacs.d/php-mode
 	url = git://github.com/ejmr/php-mode.git
+[submodule ".emacs.d/monky"]
+	path = .emacs.d/monky
+	url = git://github.com/ananthakumaran/monky.git

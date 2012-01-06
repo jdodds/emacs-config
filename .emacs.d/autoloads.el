@@ -28,5 +28,7 @@
 
 (autoload 'apache-mode "apache-mode" nil t)
 
+;(autoload 'monky-status "monky/monky" nil t)
+
 (provide 'autoloads)
 ;;; autoloads.el ends here
