@@ -18,3 +18,4 @@
 *elc
 *~
 install.log
+.emacs.d/session*
