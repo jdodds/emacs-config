@@ -11,6 +11,8 @@
  '(espresso-indent-level 4 t)
  '(markdown-command "markdown")
  '(markdown-italic-underscore t)
+ '(org-agenda-files (quote ("~/Dropbox/time.org" "~/Dropbox/budget.org" "~/Dropbox/software.org" "~/Dropbox/personal.org" "~/Dropbox/learning.org" "~/Dropbox/music.org" "~/Dropbox/MobileOrg/flagged.org" "~/Dropbox/shopping.org" "~/Dropbox/bills.org" "~/Dropbox/TODO.org" "~/Dropbox/scheduled.org" "~/Dropbox/itr.org" "~/Dropbox/immediate.org")))
+ '(php-executable "~/bin/php")
  '(python-honour-comment-indentation nil)
  '(python-use-skeletons nil)
  '(qooxdoo-compile-on-save nil)

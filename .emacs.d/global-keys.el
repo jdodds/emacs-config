@@ -12,6 +12,7 @@
 (global-set-key "\C-xB" 'jump-to-window)
 (global-set-key "\C-xQ" 'macro-query)
 (global-set-key "\C-x\C-b" 'browse-url-at-point)
+(global-set-key (kbd "<backtab>") 'yas/expand)
 
 (provide 'global-keys)
 ;;; global-keys.el ends here

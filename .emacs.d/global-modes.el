@@ -23,5 +23,7 @@
 (setq midnight-mode t)
 (setq-default indent-tabs-mode t)
 
+(yas/global-mode 1)
+
 (provide 'global-modes)
 ;;; global-modes.el ends here

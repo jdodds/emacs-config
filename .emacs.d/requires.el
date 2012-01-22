@@ -19,4 +19,5 @@
 (require 'which-func)
 (require 'flymake)
 (require 'flymake-cursor)
+(require 'yasnippet)
 ;;; requires.el ends here

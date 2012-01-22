@@ -25,8 +25,7 @@
       monky-process-type 'cmdserver
       temporary-file-directory "~/tmp"
       line-move-visual nil
-      track-eol t
-      erc-auto-query 'buffer)
+      track-eol t)
 
 (setq-default fill-column 80
 	      auto-fill-function 'do-auto-fill)

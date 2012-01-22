@@ -11,6 +11,7 @@
              (rainbow-delimiters-mode t)
              (setq tab-width 4)
              (setq indent-tabs-mode nil)
+	     (setq c-default-style "bsd")
              (setq c-basic-offset 4)
 ;	     (flymake-mode 1)
 	     (defun sane-php-lineup-arglist-intro (langelem)
