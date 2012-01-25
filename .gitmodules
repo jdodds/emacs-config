@@ -1,6 +1,3 @@
-[submodule ".emacs.d/eproject"]
-	path = .emacs.d/eproject
-	url = https://github.com/jrockway/eproject.git
 [submodule ".emacs.d/startproject"]
 	path = .emacs.d/startproject
 	url = http://github.com/jdodds/startproject.git
