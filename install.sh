@@ -15,21 +15,6 @@ function log_command () {
     $1 | tee -a $LOGFILE
 }
 
-if [[ ! -f /usr/local/share/emacs/site-lisp/magit.el ||
-	    $1 == "rebuild" ||
-	    $1 == "rebuild-magit" ]]; then
-    pushd magit
-    log_command "make" &&  log_command "sudo make install"
-    popd
-fi
-
-to_copy=(./djcb-elisp/themes/zenburn-theme.el)
-for f in ${to_copy[@]}; do
-    target=$(find_path $HOME/.unix-confs/emacs-config/.emacs.d)
-    original=$(find_path $f)
-    cp -f $original $target/
-done
-
 to_link=(.emacs .emacs.d)
 # symlink everything in $to_link to $(HOME) that isn't already linked, and make
 # a diff file and $link.new file if something else is sitting there.
