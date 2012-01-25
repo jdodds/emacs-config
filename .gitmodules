@@ -22,6 +22,3 @@
 [submodule ".emacs.d/monky"]
 	path = .emacs.d/monky
 	url = git://github.com/ananthakumaran/monky.git
-[submodule ".emacs.d/yasnippet"]
-	path = .emacs.d/yasnippet
-	url = https://github.com/capitaomorte/yasnippet
