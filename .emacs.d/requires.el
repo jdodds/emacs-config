@@ -1,7 +1,7 @@
 ;;; TODO :: Refactor these out into autoloads if possible.
 ;(require 'magit)
 (require 'psvn)
-(require 'qooxdoo)
+;(require 'qooxdoo)
 ;(require 'django-mode)
 ;(require 'django-html-mode)
 (require 'auto-complete)

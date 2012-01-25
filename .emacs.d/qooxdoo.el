@@ -148,7 +148,7 @@
 ;; eproject setup, allows us to load when appropriate and provides a nice point
 ;; for adding criteria-specific behaviours
 (require 'eproject)
-(require 'eproject-extras)
+;(require 'eproject-extras)
 
 (define-project-type qooxdoo (generic)
   (look-for "generate.py")
