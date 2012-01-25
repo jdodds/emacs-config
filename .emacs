@@ -4,7 +4,6 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 (load "~/.emacs.d/requires.el")
-(load "~/.emacs.d/feature-mode/feature-mode")
 (load "~/.emacs.d/tomorrow-theme/GNU Emacs/color-theme-tomorrow.el")
 
 (require 'autoloads)
