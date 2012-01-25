@@ -1,9 +1,6 @@
 [submodule ".emacs.d/startproject"]
 	path = .emacs.d/startproject
 	url = http://github.com/jdodds/startproject.git
-[submodule "djcb-elisp"]
-	path = djcb-elisp
-	url = https://github.com/djcb/elisp.git
 [submodule ".emacs.d/zencoding"]
 	path = .emacs.d/zencoding
 	url = https://github.com/rooney/zencoding.git
