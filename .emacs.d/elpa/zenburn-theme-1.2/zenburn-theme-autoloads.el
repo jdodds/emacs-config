@@ -3,14 +3,14 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "zenburn-theme" "zenburn-theme.el" (20256 26779))
+;;;### (autoloads nil "zenburn-theme" "zenburn-theme.el" (20264 47540))
 ;;; Generated autoloads from zenburn-theme.el
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;;***
 
-;;;### (autoloads nil nil ("zenburn-theme-pkg.el") (20256 26817 796454))
+;;;### (autoloads nil nil ("zenburn-theme-pkg.el") (20264 47540 255665))
 
 ;;;***
 
