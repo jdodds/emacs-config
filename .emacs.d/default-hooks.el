@@ -55,5 +55,10 @@
 	    (setq tab-width 4)
 	    (setq indent-tabs-mode t)))
 
+(add-hook 'gnus-summary-exit-hook
+	  (lambda ()
+	    (gnus-summary-bubble-group)))
+(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+
 (provide 'default-hooks)
 ;;; default-hooks.el ends here

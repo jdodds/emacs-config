@@ -26,6 +26,8 @@
       temporary-file-directory "~/tmp"
       line-move-visual nil
       gnus-select-method '(nnimap "imap.gmail.com")
+      gnus-group-line-format "%N\t:%P%G\n"
+      message-subscribed-address-functions '(gnus-find-subscribed-addresses)
       track-eol t)
 
 (setq-default fill-column 80
