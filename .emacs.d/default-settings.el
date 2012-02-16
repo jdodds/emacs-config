@@ -23,7 +23,7 @@
       tooltip-mode-use-echo-area t
       yaml-indent-offset 4
       monky-process-type 'cmdserver
-      temporary-file-directory "~/tmp"
+      temporary-file-directory "/tmp"
       line-move-visual nil
       gnus-select-method '(nnimap "imap.gmail.com")
       gnus-group-line-format "%N\t:%P%G\n"
@@ -31,7 +31,8 @@
       track-eol t)
 
 (setq-default fill-column 80
-	      auto-fill-function 'do-auto-fill)
+	      auto-fill-function 'do-auto-fill
+	      indent-tabs-mode t)
       
 (if (string-match "destructor" system-name)
     (setq browse-url-browser-function 'browse-url-generic

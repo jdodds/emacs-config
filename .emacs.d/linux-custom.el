@@ -12,7 +12,6 @@
  '(markdown-command "markdown")
  '(markdown-italic-underscore t)
  '(message-send-mail-function (quote message-send-mail-with-mailclient))
- '(org-agenda-files (quote ("~/Dropbox/time.org" "~/Dropbox/budget.org" "~/Dropbox/software.org" "~/Dropbox/personal.org" "~/Dropbox/learning.org" "~/Dropbox/music.org" "~/Dropbox/MobileOrg/flagged.org" "~/Dropbox/shopping.org" "~/Dropbox/TODO.org" "~/Dropbox/scheduled.org" "~/Dropbox/itr.org" "~/Dropbox/immediate.org")))
  '(org-edit-src-content-indentation 0)
  '(org-src-window-setup (quote other-frame))
  '(php-executable "~/bin/php")
