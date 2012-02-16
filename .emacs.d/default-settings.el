@@ -25,6 +25,7 @@
       monky-process-type 'cmdserver
       temporary-file-directory "~/tmp"
       line-move-visual nil
+      gnus-select-method '(nnimap "imap.gmail.com")
       track-eol t)
 
 (setq-default fill-column 80
