@@ -28,6 +28,8 @@
       gnus-select-method '(nnimap "imap.gmail.com")
       gnus-group-line-format "%N\t:%P%G\n"
       message-subscribed-address-functions '(gnus-find-subscribed-addresses)
+      setq mail-host-address "gmail.com"
+      user-mail-address "jeremiah.dodds@gmail.com"
       track-eol t)
 
 (setq-default fill-column 80
