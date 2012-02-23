@@ -11,7 +11,6 @@
  '(espresso-indent-level 4 t)
  '(markdown-command "markdown")
  '(markdown-italic-underscore t)
- '(message-send-mail-function (quote message-send-mail-with-mailclient))
  '(org-agenda-files (quote ("~/Dropbox/software.org" "~/Dropbox/personal.org" "~/Dropbox/learning.org" "~/Dropbox/music.org" "~/Dropbox/MobileOrg/flagged.org" "~/Dropbox/shopping.org" "~/Dropbox/TODO.org" "~/Dropbox/scheduled.org" "~/Dropbox/itr.org" "~/Dropbox/immediate.org")))
  '(org-edit-src-content-indentation 0)
  '(org-src-window-setup (quote other-frame))
@@ -22,11 +21,13 @@
  '(ruby-deep-arglist nil)
  '(ruby-deep-indent-paren nil)
  '(safe-local-variable-values (quote ((tab-width 4) (indent-tabs-mode t) (sgml-basic-offset . 3) (js-indent-level . 3))))
- '(send-mail-function (quote smtpmail-send-it))
  '(sql-database "")
  '(sql-mysql-program "/usr/bin/mysql")
  '(sql-server "localhost")
- '(startproject-projects-root "~/workspace"))
+ '(startproject-projects-root "~/workspace")
+ '(w3-honor-stylesheets t)
+ '(w3-reuse-buffers (quote no))
+ '(w3-use-unicode-table-characters t))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
