@@ -12,6 +12,7 @@
 (require 'global-keys)
 (require 'default-hooks)
 (require 'default-settings)
+(require 'default-advice)
 (require 'org-settings)
 (require 'default-auto-modes)
 (require 'machine-specific)

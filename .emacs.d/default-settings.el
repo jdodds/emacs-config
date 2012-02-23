@@ -28,8 +28,19 @@
       gnus-select-method '(nnimap "imap.gmail.com")
       gnus-group-line-format "%N\t:%P%G\n"
       message-subscribed-address-functions '(gnus-find-subscribed-addresses)
-      setq mail-host-address "gmail.com"
+      send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials '(("smtp.gmail.com" 465 nil nil))
+      smtpmail-auth-credentials '(("smtp.gmail.com" 465
+				   "jeremiah.dodds@gmail.com" nil))
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 465
+;      smtpmail-debug-verb t
+;      smtpmail-debug-nfo t
+      smtpmail-local-domain nil
+      smtpmail-stream-type 'ssl
       user-mail-address "jeremiah.dodds@gmail.com"
+;      setq mm-discouraged-alternatives '("text/html" "text/richtext")
       track-eol t)
 
 (setq-default fill-column 80
