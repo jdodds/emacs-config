@@ -21,3 +21,4 @@ install.log
 .emacs.d/session*
 .emacs.d/eproject.lst
 .emacs.d/bookmarks
+.emacs.d/elpa/*
