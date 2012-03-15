@@ -92,6 +92,8 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((C . t)
+   (java . t)
+;   (scala . t)
    (ruby . t)))
 
 

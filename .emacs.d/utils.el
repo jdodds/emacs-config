@@ -149,5 +149,11 @@ BEG and END (region to sort)."
  '("\\(Parse\\|Fatal\\) error: +\\(.*?\\) in \\(.*?\\) on line \\([0-9]+\\)$" 3 4 nil 2))
 
 (add-to-list 'flymake-allowed-file-name-masks '("\\.php$" flymake-php-init))
+
+(defun what-face (pos)
+  (interactive "d")
+  (let ((face (or (get-char-property (point) 'read-face-name)
+                  (get-char-property (point) 'face))))
+    (if face (message "Face: %s" face) (message "No face at %d" pos))))
 (provide 'utils)
 ;;; utils.el ends here
