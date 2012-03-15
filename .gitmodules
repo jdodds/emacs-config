@@ -7,9 +7,6 @@
 [submodule ".emacs.d/rhtml"]
 	path = .emacs.d/rhtml
 	url = https://github.com/eschulte/rhtml
-[submodule ".emacs.d/tomorrow-theme"]
-	path = .emacs.d/tomorrow-theme
-	url = https://github.com/ChrisKempson/Tomorrow-Theme.git
 [submodule ".emacs.d/monky"]
 	path = .emacs.d/monky
 	url = git://github.com/ananthakumaran/monky.git
