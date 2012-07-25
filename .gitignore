@@ -22,3 +22,5 @@ install.log
 .emacs.d/eproject.lst
 .emacs.d/bookmarks
 .emacs.d/elpa/*
+.emacs.d/lisp/sensitive.el
+.emacs.d/rcirc-log
