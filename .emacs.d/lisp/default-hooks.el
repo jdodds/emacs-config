@@ -9,24 +9,20 @@
 (add-hook 'php-mode-hook
           '(lambda ()
              (rainbow-delimiters-mode t)
+             (setq c-default-style "bsd")
              (setq tab-width 4)
-             (setq indent-tabs-mode t)
-	     (setq c-default-style "k&r")
+             (setq indent-tabs-mode nil)
              (setq c-basic-offset 4)
-;	     (flymake-mode 1)
-	     (defun sane-php-lineup-arglist-intro (langelem)
-	       (save-excursion
-		 (goto-char (cdr langelem))
-		 (vector (+ (current-column) c-basic-offset))))
-	     (defun sane-php-lineup-arglist-close (langelem)
-	       (save-excursion
-		 (goto-char (cdr langelem))
-		 (vector (current-column))))
-;	     (define-key php-mode-map '[M-g n] 'flymake-goto-next-error)
-;	     (define-key php-mode-map '[M-g p] 'flymake-goto-prev-error)
-	     (c-set-offset 'arglist-intro 'sane-php-lineup-arglist-intro)
-	     (c-set-offset 'arglist-close 'sane-php-lineup-arglist-close)))
-
+             (defun sane-php-lineup-arglist-intro (langelem)
+               (save-excursion
+                 (goto-char (cdr langelem))
+                 (vector (+ (current-column) c-basic-offset))))
+             (defun sane-php-lineup-arglist-close (langelem)
+               (save-excursion
+                 (goto-char (cdr langelem))
+                 (vector (current-column))))
+             (c-set-offset 'arglist-intro 'sane-php-lineup-arglist-intro)
+             (c-set-offset 'arglist-close 'sane-php-lineup-arglist-close)))
 
 (add-hook 'js-mode-hook
           '(lambda ()
@@ -37,8 +33,7 @@
              (turn-on-haskell-doc-mode)
              (turn-on-haskell-indent)))
 
-
-;(remove-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
@@ -47,18 +42,33 @@
 
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 (add-hook 'org-mode-hook 'turn-on-flyspell 'append)
-;(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 (add-hook 'html-mode-hook
-	  (lambda ()
-	    (setq sgml-basic-offset 4)
-	    (setq tab-width 4)
-	    (setq indent-tabs-mode t)))
+          (lambda ()
+            (setq sgml-basic-offset 4)
+            (setq tab-width 4)
+            (setq indent-tabs-mode nil)
+            (setq sgml-unclosed-tags nil)))
+
 
 (add-hook 'gnus-summary-exit-hook
-	  (lambda ()
-	    (gnus-summary-bubble-group)))
+          (lambda ()
+            (gnus-summary-bubble-group)))
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+
+(add-hook 'twitter-status-edit-mode-hook 'longlines-mode)
+
+(defun add-shell-mode-line-dirtrack ()
+  (add-to-list 'mode-line-buffer-identification
+               '(:propertize
+                 (" " (:eval (abbreviate-file-name default-directory)) " ")
+                 face
+                 dired-directory)))
+(add-hook 'shell-mode-hook 'add-shell-mode-line-dirtrack)
+
+(add-hook 'rcirc-mode-hook
+          (lambda ()
+            (auto-fill-mode nil)))
 
 (provide 'default-hooks)
 ;;; default-hooks.el ends here

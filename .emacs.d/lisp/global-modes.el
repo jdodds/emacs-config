@@ -6,8 +6,8 @@
 (if (boundp 'tool-bar-mode)
     (tool-bar-mode -1))
 
-;(if (boundp 'display-battery-mode)
-;    (display-battery-mode 1))
+(if (boundp 'display-battery-mode)
+    (display-battery-mode 1))
 
 (global-auto-revert-mode)
 (global-auto-complete-mode t)
@@ -17,13 +17,10 @@
 (iswitchb-mode t)
 (winner-mode 1)
 
-(setq auto-save-default nil)
 (setq column-number-mode t)
 
 (setq midnight-mode t)
 (setq-default indent-tabs-mode t)
-
-(yas/global-mode 1)
 
 (provide 'global-modes)
 ;;; global-modes.el ends here
