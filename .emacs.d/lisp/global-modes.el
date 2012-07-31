@@ -20,7 +20,6 @@
 (setq column-number-mode t)
 
 (setq midnight-mode t)
-(setq-default indent-tabs-mode t)
 
 (provide 'global-modes)
 ;;; global-modes.el ends here

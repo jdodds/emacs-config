@@ -8,16 +8,16 @@
       truncate-partial-width-windows nil
       uniquify-buffer-name-style 'post-forward
       redisplay-dont-pause t
-      package-archives '(("ELPA" . "http://tromey.com/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/"))
+      package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+			 ("marmalade" . "http://marmalade-repo.org/packages/")
+			 ("melpa" . "http://melpa.milkbox.net/packages/"))
       ido-enable-flex-matching t
       ido-create-new-buffer'always
       inhibit-startup-message t
       inhibit-startup-echo-area-message t
       kill-buffer-query-functions (remq
-                                   'process-kill-buffer-query-function
-                                   kill-buffer-query-functions)
+				   'process-kill-buffer-query-function
+				   kill-buffer-query-functions)
       tooltip-mode-use-echo-area t
       temporary-file-directory "/tmp"
       line-move-visual nil
@@ -27,7 +27,7 @@
       send-mail-function 'smtpmail-send-it
       smtpmail-starttls-credentials '(("smtp.gmail.com" 465 nil nil))
       smtpmail-auth-credentials '(("smtp.gmail.com" 465
-                                   "jeremiah.dodds@gmail.com" nil))
+				   "jeremiah.dodds@gmail.com" nil))
       smtpmail-default-smtp-server "smtp.gmail.com"
       smtpmail-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 465
@@ -39,24 +39,22 @@
       twittering-timer-interval 120
       rcirc-omit-responses '("JOIN" "PART" "QUIT")
       langtool-language-tool-jar "/usr/share/languagetool/LanguageTool.jar"
+      multi-term-program "/bin/zsh"
       track-eol t)
 
 (setq-default fill-column 80
-              auto-fill-function 'do-auto-fill
-              indent-tabs-mode nil)
-
-(setenv "ESHELL" (expand-file-name "~/bin/emacsshell"))
+	      auto-fill-function 'do-auto-fill)
 
 ;keep TRAMP from saving backups
 (if (boundp 'tramp-file-name-regexp)
     (add-to-list 'backup-directory-alist
-                 (cons tramp-file-name-regexp nil)))
+		 (cons tramp-file-name-regexp nil)))
 
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (add-to-list 'which-func-modes 'php-mode)
 (add-to-list 'which-func-modes 'python-mode)
-
+(add-to-list 'which-func-modes 'sh-mode)
 
 (which-func-mode 1)
 (tooltip-mode 1)

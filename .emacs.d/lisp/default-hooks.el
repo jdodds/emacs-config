@@ -58,17 +58,5 @@
 
 (add-hook 'twitter-status-edit-mode-hook 'longlines-mode)
 
-(defun add-shell-mode-line-dirtrack ()
-  (add-to-list 'mode-line-buffer-identification
-               '(:propertize
-                 (" " (:eval (abbreviate-file-name default-directory)) " ")
-                 face
-                 dired-directory)))
-(add-hook 'shell-mode-hook 'add-shell-mode-line-dirtrack)
-
-(add-hook 'rcirc-mode-hook
-          (lambda ()
-            (auto-fill-mode nil)))
-
 (provide 'default-hooks)
 ;;; default-hooks.el ends here
