@@ -43,6 +43,7 @@
       track-eol t)
 
 (setq-default fill-column 80
+	      indent-tabs-mode nil
 	      auto-fill-function 'do-auto-fill)
 
 ;keep TRAMP from saving backups
