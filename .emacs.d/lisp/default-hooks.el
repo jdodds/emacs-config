@@ -34,6 +34,7 @@
              (turn-on-haskell-indent)))
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
