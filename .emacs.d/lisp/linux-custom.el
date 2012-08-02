@@ -65,6 +65,7 @@
  '(python-honour-comment-indentation nil)
  '(python-use-skeletons nil)
  '(qooxdoo-compile-on-save nil)
+ '(rcirc-buffer-maximum-lines 500)
  '(rcirc-default-nick "exhortatory")
  '(rcirc-log-flag t)
  '(ruby-deep-arglist nil)
