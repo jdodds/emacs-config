@@ -11,6 +11,7 @@
 .emacs.d/.org-id-locations
 .emacs.d/org-clock-save.el
 .emacs.d/url/cookies
+.emacs.d/url/cache
 .authinfo
 .gnus.el
 .#*

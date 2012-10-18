@@ -33,16 +33,9 @@
              (turn-on-haskell-doc-mode)
              (turn-on-haskell-indent)))
 
-(add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 
-(defun org-summary-todo (n-done n-not-done)
-  "Switch entry to DONE when all subentries are done, to TODO otherwise."
-  (let (org-log-done org-log-states) ; turn off logging
-    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
-
-(add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
-(add-hook 'org-mode-hook 'turn-on-flyspell 'append)
+(add-hook 'org-mode-hook 'turn-on-flyspell 'append t)
 
 (add-hook 'html-mode-hook
           (lambda ()
@@ -51,13 +44,11 @@
             (setq indent-tabs-mode nil)
             (setq sgml-unclosed-tags nil)))
 
-
 (add-hook 'gnus-summary-exit-hook
           (lambda ()
             (gnus-summary-bubble-group)))
-(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 
-(add-hook 'twitter-status-edit-mode-hook 'longlines-mode)
+(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 
 (provide 'default-hooks)
 ;;; default-hooks.el ends here

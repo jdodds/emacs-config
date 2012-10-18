@@ -1,11 +1,9 @@
 (setq modes-list
-      '(("\\.md" . markdown-mode)
+      '(("\\.\\(md\\|markdown\\)$" . markdown-mode)
         ("\\.twig$" . jinja2-mode)
         ("PKGBUILD" . sh-mode)
         ("\\.yml$" . yaml-mode)
         ("\\.rst$" . rst-mode)
-        ("\\.org$" . org-mode)
-        ("\\.php$" . php-mode)
         ("\\.lua$" . lua-mode)
         ("\\.htaccess$" . apache-mode)
         ("httpd.*\\.conf$" . apache-mode)
@@ -21,7 +19,7 @@
         ("\\.tpl$" . html-mode)
         ("\\.scala$" . scala-mode)
         ("sites-\\(available\\|enabled\\)/" . apache-mode)))
-;(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+
 (dolist (alist modes-list)
   (add-to-list 'auto-mode-alist alist))
 

@@ -34,11 +34,6 @@ BEG and END (region to sort)."
   (with-current-buffer reb-target-buffer
     (query-replace-regexp (reb-target-binding reb-regexp) to-string)))
 
-(defun untabify-and-indent ()
-  (interactive)
-  (untabify (point-min) (point-max))
-  (indent-region (point-min) (point-max)))
-
 (defun pretty-print-xml ()
   (interactive)
   (save-excursion
@@ -48,24 +43,6 @@ BEG and END (region to sort)."
     (indent-region (point-min) (point-max)))
   (message "Aahhhh"))
 
-(defun untabify-directory (dir)
-  (interactive "DDirectory Root:")
-  (dolist (file (directory-files dir t))
-    (if (file-regular-p file)
-        (with-temp-buffer
-          (find-file file)
-          (untabify-and-indent)
-          (save-buffer))
-      (message "Skipping directory %s." file))))
-
-(defun create-tags (tag-dir proj-dir)
-  (setq excludes "--exclude='TAGS*' --exclude='.#*' --exclude='.min.*'")
-  "Create a ctags file for a given directory"
-  (interactive "DSave In: \nDProject Directory")
-  (shell-command
-   (format "%s -f %s/TAGS.vim --fields=afKnsSzt %s -R %s" ctags-path tag-dir excludes proj-dir))
-  (shell-command
-   (format "%s -f %s/TAGS.emacs --fields=afKnsSzt %s -e -R %s" ctags-path tag-dir excludes proj-dir)))
 
 (defun set-electrics ()
   "Set common-to-most-languages electric pairs"
@@ -84,12 +61,12 @@ BEG and END (region to sort)."
 
 (defun jump-to-window (buffer-name)
   (interactive "bEnter buffer to jump to: ")
-  (let ((visible-buffers (mapcar '(lambda (window) (buffer-name (window-buffer window))) (window-list)))
+  (let ((visible-buffers (mapcar #'(lambda (window) (buffer-name (window-buffer window))) (window-list)))
         window-of-buffer)
     (if (not (member buffer-name visible-buffers))
         (error "'%s' does not have visible window" buffer-name)
       (setq window-of-buffer
-            (delq nil (mapcar '(lambda (window) 
+            (delq nil (mapcar #'(lambda (window) 
                                  (if (equal buffer-name (buffer-name (window-buffer window)))
                                      window nil)) (window-list))))
       (select-window (car window-of-buffer)))))
@@ -155,5 +132,25 @@ BEG and END (region to sort)."
   (let ((face (or (get-char-property (point) 'read-face-name)
                   (get-char-property (point) 'face))))
     (if face (message "Face: %s" face) (message "No face at %d" pos))))
+
+(defun ditaa-generate ()
+  (interactive)
+  (shell-command
+   (concat ditaa-cmd " " buffer-file-name)))
+
+(defun my-recompile ()
+    "Run compile and resize the compile window closing the old one if necessary"
+    (interactive)
+    (progn
+      (if (get-buffer "*compilation*") ; If old compile window exists
+  	(progn
+  	  (delete-windows-on (get-buffer "*compilation*")) ; Delete the compilation windows
+  	  (kill-buffer "*compilation*") ; and kill the buffers
+  	  )
+        )
+      (call-interactively 'compile)
+      (enlarge-window 20)))
+      
+
 (provide 'utils)
 ;;; utils.el ends here

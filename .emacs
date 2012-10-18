@@ -1,6 +1,8 @@
 (let ((default-directory "~/.emacs.d"))
   (normal-top-level-add-subdirs-to-load-path))
 
+(package-initialize)
+
 (load "~/.emacs.d/lisp/requires.el")
 
 (require 'autoloads)
@@ -17,11 +19,5 @@
 
 (load "~/.emacs.d/haskell-mode/haskell-site-file")
 (load custom-file)
-(require 'org-install)
-
-(load-theme 'kaens)
-
-(unless (boundp 'server-process)
-  (server-start))
-
-(edit-server-start)
+(load-theme 'ir-black)
+(php+-mode-setup)
