@@ -177,7 +177,6 @@
       org-feed-retrieve-method 'curl
 
 
-      org-pretty-entities t
       org-capture-templates '(("t" "todo" entry
                                (file (concat org-directory "/refile.org"))
                                "* TODO %?\n%U\n%a\n"

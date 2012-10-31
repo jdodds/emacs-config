@@ -1,5 +1,6 @@
 (setq tags-revert-without-query t
       tramp-default-method "ssh"
+      display-buffer-reuse-frames t
       backup-directory-alist `(("." . ,(expand-file-name "~/.saves/")))
       backup-by-copying t
       enable-recursive-minibuffers t
